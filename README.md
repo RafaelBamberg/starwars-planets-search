@@ -19,4 +19,8 @@ Projeto feito utilizando Redux - Rafael Bamberg | Tribo 13 - B
 ## Contato
 
 Rafael Bamberg - raafaelbamberg@gmail.com
+
+## Link do Pull Request
+* [Starwars Planets Search](https://github.com/tryber/sd-013-b-project-starwars-planets-search/pull/135)
+
 <p align="right">(<a href="#top">back to top</a>)</p>
