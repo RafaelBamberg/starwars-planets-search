@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import StarWarsContext from '../context/StarWarsContext';
+import '../App.css';
 
 // feito olhando com o base o repositorio: https://github.com/tryber/sd-013-b-revisao-music-table/blob/master/src/components/Table.jsx
 // https://www.youtube.com/watch?v=zypbcG3ZVnc&list=PLC3y8-rFHvwgWTSrDiwmUsl4ZvipOw9Cz&index=6
@@ -79,7 +80,7 @@ function Table() {
         <option value="rotation_period">rotation_period</option>
         <option value="surface_water">surface_water</option>
       </select>
-      <label htmlFor="asc-radio">
+      <label className="asc-desc" htmlFor="asc-radio">
         ASC
         <input
           data-testid="column-sort-input-asc"
@@ -90,7 +91,7 @@ function Table() {
           onClick={ () => setSortAscOrDesc('ASC') }
         />
       </label>
-      <label htmlFor="desc-radio">
+      <label className="asc-desc" htmlFor="desc-radio">
         DESC
         <input
           data-testid="column-sort-input-desc"
@@ -142,11 +143,11 @@ function Table() {
         Filtrar
       </button>
       <div data-testid="filter">
-        <button type="button" onClick={ removeFilter }> X </button>
+        <button type="button" onClick={ removeFilter }> Limpar Filtros </button>
       </div>
       <table>
         <thead>
-          <tr>
+          <tr className="tablehead-color">
             <th>Name</th>
             <th>Rotation Period</th>
             <th>Orbital Period</th>
@@ -162,7 +163,7 @@ function Table() {
             <th>Url</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="table-color">
           { planets
             .filter((planet) => {
               const values = filter.filters.filterByNumericValues[0];

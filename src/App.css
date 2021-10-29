@@ -7,10 +7,19 @@
   pointer-events: none;
 }
 
-@media ( prefers-reduced-motion : no-preference ) {
+@media ( max-width: 767px ) {
 
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
+    position: fixed;
+    width: 100%;
+    background: var(--container-color);
+    top: -150%;
+    left: 0;
+    padding: 3.5rem 0;
+    transition: .4s;
+    z-index: var(--z-fixed);
+    border-radius: 0 0 1.5rem 1.5rem;
   }
 }
 
@@ -39,3 +48,37 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+background-color: hsl(30, 8%, 8%);
+background-size: cover;
+display: grid;
+
+font-family: 'Inconsolata', monospace;
+place-items: center;
+}
+
+*{
+  box-sizing: border-box;
+  padding: 2px;
+  margin: 2px;
+}
+
+.table-color {
+  text-align: center;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.05);
+  background-color: rgba(255,255,255,0.5);
+}
+
+.tablehead-color {
+  text-align: center;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.05);
+  background-color: rgba(255,255,255,0.5);
+}
+
+.asc-desc {
+  font: inherit;
+  color: currentColor;
+  background-color: white;
+}
+
